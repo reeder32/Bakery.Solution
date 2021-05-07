@@ -1,3 +1,32 @@
+# Bakery.Solution
+## A console app to order your favorite bread and pastries
+#### By Nick Reeder
+
+## Technologies Used
+- c#
+- .Net
+- Microsoft.NET.Test
+- 
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+
+# Get Started
+
+- Open your favorite Terminal
+## Installation
+```sh
+git clone https://github.com/reeder32/Bakery.Solution.git
+```
+#### Run Tests
+```sh
+cd BakeryTests
+dotnet test
+```
+#### Run Program
+```sh
+cd Bakery
+dotnet run
+```
+
 ## License
 
 [MIT License](https://opensource.org/licenses/MIT)
