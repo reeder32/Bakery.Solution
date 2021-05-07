@@ -11,10 +11,14 @@ namespace Items.Models
       _numberOfLoaves = numberOfLoaves;
     }
 
-    public int getNumberOfLoaves()
+    public int GetNumberOfLoaves()
     {
       return _numberOfLoaves;
     }
 
+    public void AddToLoaves(int numberOfLoaves)
+    {
+      _numberOfLoaves += numberOfLoaves;
+    }
   }
 }
