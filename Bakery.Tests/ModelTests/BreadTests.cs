@@ -13,7 +13,7 @@ namespace BreadModels.Tests
     {
       int numberOfLoaves = 2;
       Bread bread = new Bread(numberOfLoaves);
-      int result = bread.GetNumberOfLoaves();
+      int result = bread.GetItemQuantity();
 
       Assert.AreEqual(numberOfLoaves, result);
     }
@@ -24,9 +24,9 @@ namespace BreadModels.Tests
     {
       int numberOfLoaves = 2;
       Bread bread = new Bread(numberOfLoaves);
-      bread.AddToLoaves(numberOfLoaves);
+      bread.AddItem(numberOfLoaves);
 
-      int result = bread.GetNumberOfLoaves();
+      int result = bread.GetItemQuantity();
 
       Assert.AreEqual(4, result);
     }
@@ -37,9 +37,22 @@ namespace BreadModels.Tests
     {
       int numberOfLoaves = 2;
       Bread bread = new Bread(numberOfLoaves);
-      bread.RemoveLoaves(numberOfLoaves);
+      bread.RemoveItem(numberOfLoaves);
 
-      int result = bread.GetNumberOfLoaves();
+      int result = bread.GetItemQuantity();
+
+      Assert.AreEqual(0, result);
+    }
+
+    [TestMethod]
+
+    public void ShouldGetPriceForQuantiy_Int()
+    {
+      int numberOfLoaves = 2;
+      Bread bread = new Bread(numberOfLoaves);
+
+
+      int result = bread.GetPrice();
 
       Assert.AreEqual(0, result);
     }

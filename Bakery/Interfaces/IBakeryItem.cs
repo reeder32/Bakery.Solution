@@ -8,9 +8,13 @@ interface IBakeryItem
   {
 
   }
-
   public int GetPrice()
   {
-
+    return 0;
   }
+  public int GetItemQuantity()
+  {
+    return 0;
+  }
+
 }
