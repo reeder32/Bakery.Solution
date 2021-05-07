@@ -1,13 +1,13 @@
 # Bakery.Solution
 ## A console app to order your favorite bread and pastries
 #### By Nick Reeder
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 ## Technologies Used
 - c#
 - .Net
 - Microsoft.NET.Test
-- 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+
 
 # Get Started
 
