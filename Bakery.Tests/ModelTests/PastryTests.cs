@@ -54,14 +54,14 @@ namespace PastryModels.Tests
 
       int result = Pastry.GetPrice();
 
-      Assert.AreEqual(10, result);
+      Assert.AreEqual(4, result);
     }
 
     [TestMethod]
 
-    public void ShouldApplyDiscountWhenPurchasingInMultiplesOfTwo_Int()
+    public void ShouldApplyDiscountWhenPurchasingInMultiplesOfThree_Int()
     {
-      int numberOfPastries = 7;
+      int numberOfPastries = 3;
       Pastry Pastry = new Pastry(numberOfPastries);
 
 
@@ -69,7 +69,7 @@ namespace PastryModels.Tests
       int discount = Pastry.ApplyDiscount();
 
       int result = price - discount;
-      Assert.AreEqual(20, result);
+      Assert.AreEqual(5, result);
     }
   }
 }
