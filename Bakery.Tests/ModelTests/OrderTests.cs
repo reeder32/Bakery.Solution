@@ -17,7 +17,7 @@ namespace OrderModel.Tests
 
       Order order = new Order(bread, pastry);
 
-      Assert.AreEqual(4, order.breadOrder + order.pastryOrder);
+      Assert.AreEqual(4, order.GetBreadOrder() + order.GetPastryOrder());
     }
 
   }

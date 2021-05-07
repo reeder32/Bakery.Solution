@@ -12,6 +12,14 @@ namespace Items.Models
 
     private int _orderPrice { get; set; }
 
+    public int GetBreadOrder()
+    {
+      return _breadOrder.GetItemQuantity();
+    }
+    public int GetPastryOrder()
+    {
+      return _pastryOrder.GetItemQuantity();
+    }
 
     // public  int GetOrderPrice()
     // {
