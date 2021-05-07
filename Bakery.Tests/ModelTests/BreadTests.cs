@@ -69,7 +69,7 @@ namespace BreadModels.Tests
       int discount = bread.ApplyDiscount();
 
       int result = price - discount;
-      Assert.AreEqual(25, result);
+      Assert.AreEqual(20, result);
     }
   }
 }
