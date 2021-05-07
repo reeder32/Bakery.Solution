@@ -54,7 +54,7 @@ namespace BreadModels.Tests
 
       int result = bread.GetPrice();
 
-      Assert.AreEqual(0, result);
+      Assert.AreEqual(6, result);
     }
   }
 }
