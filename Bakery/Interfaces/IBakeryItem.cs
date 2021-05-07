@@ -17,4 +17,9 @@ interface IBakeryItem
     return 0;
   }
 
+  public int ApplyDiscount()
+  {
+    return 0;
+  }
+
 }

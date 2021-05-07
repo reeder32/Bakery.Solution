@@ -54,7 +54,22 @@ namespace BreadModels.Tests
 
       int result = bread.GetPrice();
 
-      Assert.AreEqual(6, result);
+      Assert.AreEqual(10, result);
+    }
+
+    [TestMethod]
+
+    public void ShouldApplyDiscountWhenPurchasingInMultiplesOfTwo_Int()
+    {
+      int numberOfLoaves = 7;
+      Bread bread = new Bread(numberOfLoaves);
+
+
+      int price = bread.GetPrice();
+      int discount = bread.ApplyDiscount();
+
+      int result = price - discount;
+      Assert.AreEqual(25, result);
     }
   }
 }

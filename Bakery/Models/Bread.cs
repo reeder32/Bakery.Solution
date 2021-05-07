@@ -5,7 +5,7 @@ namespace Items.Models
   public class Bread : IBakeryItem
   {
     private static int _numberOfLoaves { get; set; }
-    private static int _itemPrice { get; set; } = 3;
+    private static int _itemPrice { get; set; } = 5;
     public Bread(int numberOfLoaves)
     {
       _numberOfLoaves = numberOfLoaves;
@@ -29,6 +29,19 @@ namespace Items.Models
     public int GetPrice()
     {
       return _numberOfLoaves * _itemPrice;
+    }
+
+    public int ApplyDiscount()
+    {
+      if (_numberOfLoaves > 2)
+      {
+        int discountPrice = _numberOfLoaves / 3;
+        return discountPrice * 5;
+      }
+      else
+      {
+        return 0;
+      }
     }
   }
 }
