@@ -9,7 +9,7 @@ namespace OrderModel.Tests
   {
     [TestMethod]
 
-    public void OrderShouldInStntiateWithBreadAndPastryOrder_Int()
+    public void OrderShouldInStantiateWithBreadAndPastryOrder_Int()
     {
       int numberOfLoaves = 2;
       Bread bread = new Bread(numberOfLoaves);
@@ -18,6 +18,50 @@ namespace OrderModel.Tests
       Order order = new Order(bread, pastry);
 
       Assert.AreEqual(4, order.GetBreadOrder() + order.GetPastryOrder());
+    }
+
+    [TestMethod]
+
+    public void OrderShouldReturnPriceForBreadAndPastry_Int()
+    {
+      int numberOfLoaves = 2;
+      Bread bread = new Bread(numberOfLoaves);
+      Pastry pastry = new Pastry(numberOfLoaves);
+
+      Order order = new Order(bread, pastry);
+
+      int result = order.GetOrderPrice();
+      Assert.AreEqual(14, result);
+    }
+
+    [TestMethod]
+
+    public void OrderShouldReturnPriceForBreadAndPastryOrderGreaterThanTwo_Int()
+    {
+      int numberOfLoaves = 3;
+      Bread bread = new Bread(numberOfLoaves);
+      Pastry pastry = new Pastry(numberOfLoaves);
+
+      Order order = new Order(bread, pastry);
+
+      int result = order.GetOrderPrice();
+      Assert.AreEqual(15, result);
+    }
+
+    [TestMethod]
+
+    public void OrderShouldRemoveBreadItem_Int()
+    {
+      int numberOfLoaves = 3;
+      Bread bread = new Bread(numberOfLoaves);
+      Pastry pastry = new Pastry(numberOfLoaves);
+
+      Order order = new Order(bread, pastry);
+
+      order.RemoveBreadItem(1);
+
+      int result = order.GetBreadOrder();
+      Assert.AreEqual(2, result);
     }
 
   }

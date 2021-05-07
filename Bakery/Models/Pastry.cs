@@ -23,7 +23,15 @@ namespace Items.Models
 
     public void RemoveItem(int quantity)
     {
-      _numberOfPastries -= quantity;
+      if (quantity > _numberOfPastries)
+      {
+        _numberOfPastries = 0;
+      }
+      else
+      {
+        _numberOfPastries -= quantity;
+      }
+
     }
 
     public int GetPrice()
