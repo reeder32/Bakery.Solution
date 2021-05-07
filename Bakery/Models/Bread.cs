@@ -20,5 +20,10 @@ namespace Items.Models
     {
       _numberOfLoaves += numberOfLoaves;
     }
+
+    public int RemoveLoaves(int numberOfLoaves)
+    {
+      return numberOfLoaves;
+    }
   }
 }

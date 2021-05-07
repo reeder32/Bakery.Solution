@@ -32,5 +32,19 @@ namespace BreadModels.Tests
 
       Assert.AreEqual(4, result);
     }
+
+    [TestMethod]
+
+    public void ShouldBeAbleToRemoveBreadLoaves_Int()
+    {
+      int numberOfLoaves = 2;
+      Bread bread = new Bread(numberOfLoaves);
+
+      bread.AddToLoaves(numberOfLoaves);
+
+      int result = bread.RemoveLoaves(numberOfLoaves);
+
+      Assert.AreEqual(0, result);
+    }
   }
 }
