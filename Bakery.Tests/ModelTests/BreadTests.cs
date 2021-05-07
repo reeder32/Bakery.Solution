@@ -13,7 +13,6 @@ namespace BreadModels.Tests
     {
       int numberOfLoaves = 2;
       Bread bread = new Bread(numberOfLoaves);
-
       int result = bread.GetNumberOfLoaves();
 
       Assert.AreEqual(numberOfLoaves, result);
@@ -25,7 +24,6 @@ namespace BreadModels.Tests
     {
       int numberOfLoaves = 2;
       Bread bread = new Bread(numberOfLoaves);
-
       bread.AddToLoaves(numberOfLoaves);
 
       int result = bread.GetNumberOfLoaves();
@@ -39,10 +37,9 @@ namespace BreadModels.Tests
     {
       int numberOfLoaves = 2;
       Bread bread = new Bread(numberOfLoaves);
+      bread.RemoveLoaves(numberOfLoaves);
 
-      bread.AddToLoaves(numberOfLoaves);
-
-      int result = bread.RemoveLoaves(numberOfLoaves);
+      int result = bread.GetNumberOfLoaves();
 
       Assert.AreEqual(0, result);
     }

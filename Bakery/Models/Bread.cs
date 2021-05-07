@@ -21,9 +21,9 @@ namespace Items.Models
       _numberOfLoaves += numberOfLoaves;
     }
 
-    public int RemoveLoaves(int numberOfLoaves)
+    public void RemoveLoaves(int numberOfLoaves)
     {
-      return numberOfLoaves;
+      _numberOfLoaves -= numberOfLoaves;
     }
   }
 }
