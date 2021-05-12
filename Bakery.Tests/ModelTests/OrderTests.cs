@@ -80,5 +80,37 @@ namespace OrderModel.Tests
       Assert.AreEqual(2, result);
     }
 
+    [TestMethod]
+
+    public void OrderShouldAddBread_Int()
+    {
+      int numberOfLoaves = 3;
+      Bread bread = new Bread(numberOfLoaves);
+      Pastry pastry = new Pastry(numberOfLoaves);
+
+      Order order = new Order(bread, pastry);
+
+      order.AddBreadItem(3);
+
+      int result = order.GetBreadOrder();
+      Assert.AreEqual(6, result);
+    }
+
+    [TestMethod]
+
+    public void OrderShouldAddPastry_Int()
+    {
+      int numberOfLoaves = 3;
+      Bread bread = new Bread(numberOfLoaves);
+      Pastry pastry = new Pastry(numberOfLoaves);
+
+      Order order = new Order(bread, pastry);
+
+      order.AddPastryItem(3);
+
+      int result = order.GetPastryOrder();
+      Assert.AreEqual(6, result);
+    }
+
   }
 }
