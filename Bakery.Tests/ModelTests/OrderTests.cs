@@ -64,5 +64,21 @@ namespace OrderModel.Tests
       Assert.AreEqual(2, result);
     }
 
+    [TestMethod]
+
+    public void OrderShouldRemovePastry_Int()
+    {
+      int numberOfLoaves = 3;
+      Bread bread = new Bread(numberOfLoaves);
+      Pastry pastry = new Pastry(numberOfLoaves);
+
+      Order order = new Order(bread, pastry);
+
+      order.RemovePastryItem(1);
+
+      int result = order.GetPastryOrder();
+      Assert.AreEqual(2, result);
+    }
+
   }
 }
