@@ -49,6 +49,11 @@ namespace Items.Models
       return discountBreadPrice + discountPastryPrice;
     }
 
+    public int GetOrginalPrice()
+    {
+      return _breadOrder.GetPrice() + _pastryOrder.GetPrice();
+    }
+
   }
 }
 
