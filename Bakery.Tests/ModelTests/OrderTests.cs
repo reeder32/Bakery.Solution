@@ -122,8 +122,6 @@ namespace OrderModel.Tests
 
       Order order = new Order(bread, pastry);
 
-      order.AddPastryItem(3);
-
       int result = order.GetOrginalPrice();
       Assert.AreEqual(21, result);
     }
