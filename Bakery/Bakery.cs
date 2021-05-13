@@ -16,13 +16,17 @@ class Bakery
     if (reply.ToLower() == "y")
     {
       string orderTotalString = newOrder.GetOrderPrice().ToString();
-      Console.WriteLine("\nYour total is ${0}\n", orderTotalString);
+      int savings = newOrder.GetOrginalPrice() - newOrder.GetOrderPrice();
+      string originOrderPriceString = savings.ToString();
+      Console.WriteLine("\nYour total is ${0}.00\nYou saved {1} dollars!!", orderTotalString, savings);
     }
     else
     {
       newOrder = ReviseOrder(newOrder);
       string orderTotalString = newOrder.GetOrderPrice().ToString();
-      Console.WriteLine("\nYour new total is ${0}\n", orderTotalString);
+      int savings = newOrder.GetOrginalPrice() - newOrder.GetOrderPrice();
+      string originOrderPriceString = savings.ToString();
+      Console.WriteLine("\nYour new total is ${0}.00\nYou saved {1} dollars today!!", orderTotalString, savings);
     }
 
     StartOver();
